@@ -1,0 +1,33 @@
+<div>
+  <h1>REGISTRATION</h1>
+  <label for="name">name</label>
+  <input type="text" [(ngModel)]="names"><br>
+  <br>
+  <label for="district">district</label>
+  <input type="text" [(ngModel)]="address"><br>
+  <br>
+  <label for="dob">dob</label>
+  <input type="date" [(ngModel)]="birth">
+  
+  <button class="btn"(click)="onSubmit()">Next</button>
+  <select [(ngModel)]="namelist">
+    <option value="1">vinusha
+    </option> 
+    <option value="2">vinu</option>
+    <option value="3">sutha</option>
+    <option value="4">loed shivan</option><br>
+  </select>
+  <br>
+  <table *ngIf="dataTable.length > 0">
+    <tr>
+      <th>name</th>
+      <th>district</th>
+      <th>dob</th>
+    </tr>
+    <tr *ngFor="let data of dataTable">
+      <td>{{data.name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.dob}}</td>
+    </tr>
+  </table>
+</div>
